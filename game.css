@@ -1,0 +1,163 @@
+body{
+    display: flex;
+    flex-direction: column;
+    /* height: 1400px; */
+    margin: 0;
+    background-color: rgb(239, 239, 239);
+    
+}
+.headline{
+    font-size: x-large;
+    position: absolute;
+    background-color: rgb(217, 228, 228);
+    width: 96%;
+    margin-left: 2%;
+    padding-left: 1%;
+    padding-bottom: 0.5%;
+    border:2px solid black;
+}
+.login_info{
+    display: inline-flex;
+    position: absolute;
+    right: 10px;
+}
+.login_info::after{
+    font-size: small;
+    content: "注销";
+}
+.main{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.gamearea{
+    display: flex;
+    position: absolute;
+    left: 15%;
+}
+.gamebox{
+    display: flex;
+    flex-direction: column;
+}
+.gamename{
+    font-size: large;
+    color: brown;
+    margin: 20px auto 0px 40px;
+    
+}
+.gameplayer{
+    width: 722px;
+    height: 410px;
+    background-color: lightgray;
+    padding: 25px;
+    margin: 5px 25px 25px 25px;
+    border: 3px solid black;
+}
+.gameplayer .load{
+    font-size: larger;
+    user-select: none;
+}
+.relatedgame{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 200px;
+    height: 415px;
+    margin-top: 5px;
+    border: 2px solid black;
+    padding: 10px;
+}
+.othergame{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    
+}
+.adv{
+    background-color: rgb(107, 106, 106);
+    width: 150px;
+    height: 550px;
+    margin: 10px;
+    z-index: 98;
+}
+.commentarea{
+    position: absolute;
+    top: 650px;
+    height: 800px;
+    margin: 0 250px;
+}
+.comment_board{
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    border: 1px solid gray;
+    padding: 20px 40px;
+    background-color: white;
+}
+.comments_headline{
+    width: auto;
+    height: 25px;
+    margin: 8px 10px;
+}
+.self_comment_tool{
+        
+    display: flex;
+}
+.public_comments{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    margin: 0 0x 25px 0;
+}
+.each_comment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 140px;
+    border: 1px solid rgb(211, 209, 209);
+}
+.user_info{
+    font-size: smaller;
+    width: 100%-16px;
+    background-color: whitesmoke;
+    padding: 10px;
+    
+}
+.username{
+    color: blue;
+}
+.date{
+    color: gray;
+}
+a{
+    margin-left: 10px;
+    float: right;
+}
+a:first-child{
+    color: lightcoral;
+}
+.content{
+    height: 100%;
+    padding: 10px;
+}
+p{
+    display: block;
+    margin: 0;
+}
+textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    resize: none;
+    padding: 8px;
+}
+.float_adv{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    width: 300px;
+    background-color: lightslategray;
+    z-index: 99;
+}
