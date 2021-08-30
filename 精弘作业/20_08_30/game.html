@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>节拍器-精弘游戏大厅</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="game.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    
+    <body id="body">
+       <!--  headline -->
+        <div id="headline">
+            <span id="hall">精弘游戏大厅</span>
+            <span id="login_info">华东一区</span>
+        </div>
+
+        <!-- main -->
+        <div id="main">
+            <div id="gamearea">
+                <div id="gamebox">
+                    <div id="gamename"><b>节拍器</b></div>
+                    <div id="gameplayer">
+                        <input id="start" type="button" value="点击开始游戏" onclick="startGame()">
+                        <div id="time">倒计时 {{ time }} 秒</div>
+                        <div id='score_pad' v-html="'你的分数为 '+score+' 分'"></div>
+                        <div id="sync_area"></div>
+                        <div id="scroll_area"></div>
+                    </div>
+                </div>
+
+                <div id="sideBar">
+                    Top 10
+                    <div id="rank"> </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- commentarea -->
+        <div id="commentarea">
+            <div id="comment_board">
+                <div id="comments_headline">6条评论</div>
+                <div id="self_comment_tool">
+                    <textarea rows="2" cols="80">大家玩的开心...</textarea>
+                    <button class="upload_photo">上传图片</button>
+                    <button class="button">发射评论</button>
+                </div>
+                <div id="public_comments">
+                    <div style="padding: 10px 10px 10px 10px;height: 30px;width: 100%-10px;background-color:rgb(246, 246, 246);">评论（6）</div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">Dune</span> 
+                            <span class="date">2021-8-16</span>
+                            <span>
+                                <a>7楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>2楼那位帅哥，我破你记录啦~</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">浅札</span> 
+                            <span class="date">2021-8-16</span>
+                            <span>
+                                <a>6楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>键盘已经敲废两把。。</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">int（）界</span> 
+                            <span class="date">2021-8-16</span>
+                            <span>
+                                <a>5楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>王者荣耀，不玩了.jpg</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">Null</span> 
+                            <span class="date">2021-8-16</span>
+                            <span>
+                                <a>4楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>手残党勿入`(*>﹏<*)′</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">Node</span> 
+                            <span class="date">2021-8-16</span>
+                            <span>
+                                <a>3楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>我发现只要在开局狂按10次空格就会获得隐藏成就！</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">Info</span> 
+                            <span class="date">2021-8-15</span>
+                            <span>
+                                <a>2楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>爆肝10小时，没人分比我高了吧？</p>
+                        </div>
+                    </div>
+                    <div class="each_comment">
+                        <div class="user_info">
+                            <span class="username">枫寒</span> 
+                            <span class="date">2021-8-15</span>
+                            <span>
+                                <a>1楼</a>
+                                <a>举报</a>
+                                <a>回复</a>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p>做的不错哟~</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./game.js" defer="defer"></script>
+</html>
